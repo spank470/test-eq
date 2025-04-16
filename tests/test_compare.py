@@ -2,7 +2,7 @@ import requests
 import allure
 import time
 
-@allure.title("Сравнение HTML-ответов с двух серверов_ok")
+@allure.title("1-Сравнение HTML-ответов с двух серверов_ok")
 @allure.description("Проверяем, что страницы REF и TARGET возвращают одинаковый HTML и статус код 200.")
 
 def test_compare_html_responses_okk():
@@ -26,7 +26,7 @@ def test_compare_html_responses_okk():
             allure.attach(target.text, name="TARGET (diff)", attachment_type=allure.attachment_type.TEXT)
         assert ref.text == target.text, "HTML ответы отличаются!"
         
-@allure.title("Сравнение HTML-ответов с двух серверов_error")
+@allure.title("2-Сравнение HTML-ответов с двух серверов_error")
 @allure.description("Проверяем, что страницы REF и TARGET возвращают одинаковый HTML и статус код 200.")        
         
 def test_compare_html_responses_error():
