@@ -45,5 +45,3 @@ jobs:
           publish_dir: allure-report
           publish_branch: gh-pages
           destination_dir: latest
-
-          
