@@ -45,3 +45,8 @@ jobs:
           publish_dir: allure-report
           publish_branch: gh-pages
           destination_dir: latest
+
+      - name: Share Allure Report URL
+        if: always()
+        run: |
+          echo "::notice title=Allure Report::[Открыть отчёт](https://spank470.github.io/test-eq/latest)"
