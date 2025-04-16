@@ -61,3 +61,5 @@ class TestCompareHTML:
 
         with allure.step("Сравнение HTML содержимого"):
             assert ref.text == target.text, "HTML ответы отличаются!"
+            
+            
