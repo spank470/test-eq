@@ -4,7 +4,7 @@ import allure
 @allure.suite("Сравнение HTML-ответов с двух серверов")  # Название группы в Allure
 class TestCompareHTML:
 
-    @allure.title("1 - REF и TARGET совпадают")
+    @allure.title("1 - web_tour")
     @allure.description("Проверяем, что страницы REF и TARGET возвращают одинаковый HTML и статус код 200.")
     def test_compare_html_web_tour(self):
         url_ref = "http://webtours.load-test.ru:1090/cgi-bin/nav.pl?in=home"
@@ -23,7 +23,7 @@ class TestCompareHTML:
         with allure.step("Сравнение HTML содержимого"):
             assert ref.text == target.text, "HTML ответы отличаются!"
 
-    @allure.title("2 - REF и TARGET различаются")
+    @allure.title("2 - google")
     @allure.description("Проверяем, что страницы REF и TARGET возвращают одинаковый HTML и статус код 200.")
     def test_compare_html_google(self):
         url_ref = "http://webtours.load-test.ru:1090/cgi-bin/nav.pl?in=home"
@@ -42,7 +42,7 @@ class TestCompareHTML:
         with allure.step("Сравнение HTML содержимого"):
             assert ref.text == target.text, "HTML ответы отличаются!"
             
-    @allure.title("3 - REF и TARGET различаются")
+    @allure.title("3 - yandex")
     @allure.description("Проверяем, что страницы REF и TARGET возвращают одинаковый HTML и статус код 200.")
     def test_compare_html_yandex(self):
         url_ref = "http://yandex.ru"
