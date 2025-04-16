@@ -22,10 +22,17 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+          pip install pytest-html
 
-      - name: Run tests
+      - name: Run tests with HTML report
         run: |
-          pytest tests/
+          pytest tests/ --html=report.html --self-contained-html
 
-      
-      
+      - name: Deploy report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./
+          keep_files: true
+          destination_dir: latest-report
