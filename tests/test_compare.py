@@ -6,7 +6,7 @@ class TestCompareHTML:
 
     @allure.title("1 - REF и TARGET совпадают")
     @allure.description("Проверяем, что страницы REF и TARGET возвращают одинаковый HTML и статус код 200.")
-    def test_compare_html_responses_okk(self):
+    def test_compare_html_web_tour(self):
         url_ref = "http://webtours.load-test.ru:1090/cgi-bin/nav.pl?in=home"
         url_target = "http://webtours.load-test.ru:1090/cgi-bin/nav.pl?in=home"
 
@@ -25,7 +25,7 @@ class TestCompareHTML:
 
     @allure.title("2 - REF и TARGET различаются")
     @allure.description("Проверяем, что страницы REF и TARGET возвращают одинаковый HTML и статус код 200.")
-    def test_compare_html_responses_error(self):
+    def test_compare_html_google(self):
         url_ref = "http://webtours.load-test.ru:1090/cgi-bin/nav.pl?in=home"
         url_target = "http://google.com"
 
@@ -44,7 +44,7 @@ class TestCompareHTML:
             
     @allure.title("3 - REF и TARGET различаются")
     @allure.description("Проверяем, что страницы REF и TARGET возвращают одинаковый HTML и статус код 200.")
-    def test_compare_html_responses_error(self):
+    def test_compare_html_yandex(self):
         url_ref = "http://yandex.ru"
         url_target = "http://google.com"
 
