@@ -2,7 +2,7 @@ import requests
 import allure
 
 @allure.suite("Сравнение HTML-ответов с двух серверов")  # Название группы в Allure
-class Requests:
+class Запросы:
 
     @allure.title("1 - web_tour")
     @allure.description("Проверяем, что страницы REF и TARGET возвращают одинаковый HTML и статус код 200.")
