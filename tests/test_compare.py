@@ -25,8 +25,6 @@ def test_compare_html_responses_okk():
             allure.attach(ref.text, name="REF (diff)", attachment_type=allure.attachment_type.TEXT)
             allure.attach(target.text, name="TARGET (diff)", attachment_type=allure.attachment_type.TEXT)
         assert ref.text == target.text, "HTML ответы отличаются!"
-
-time.sleep(3)    
         
 def test_compare_html_responses_error():
     url_ref = "http://webtours.load-test.ru:1090/cgi-bin/nav.pl?in=home"
