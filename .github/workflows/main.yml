@@ -1,4 +1,4 @@
-name: API Tests
+name: Run API tests with Allure report
 
 on:
   push:
@@ -25,16 +25,23 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install pytest-html
+          pip install allure-pytest
 
-      - name: Run tests with HTML report
+      - name: Run tests and collect Allure results
         run: |
-          pytest tests/ --html=report.html --self-contained-html
+          pytest --alluredir=allure-results
 
-      - name: Deploy report to GitHub Pages
+      - name: Generate Allure HTML report
+        uses: simple-elf/allure-report-action@v1.7
+        with:
+          allure_results: allure-results
+          allure_report: allure-report
+          keep_reports: true
+
+      - name: Deploy Allure report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: allure-report
           publish_branch: gh-pages
-          publish_dir: ./
-          destination_dir: latest-report
+          destination_dir: latest
