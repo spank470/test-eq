@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Wed Apr 16 09:50:37 GMT 2025","Wed Apr 16 09:50:37 GMT 2025","713","tests","Сравнение HTML-ответов с двух серверов","TestCompareHTML","","","2 - google","Проверяем, что страницы REF и TARGET возвращают одинаковый HTML и статус код 200."
+"failed","Wed Apr 16 09:50:37 GMT 2025","Wed Apr 16 09:50:41 GMT 2025","3447","tests","Сравнение HTML-ответов с двух серверов","TestCompareHTML","","","3 - yandex","Проверяем, что страницы REF и TARGET возвращают одинаковый HTML и статус код 200."
+"passed","Wed Apr 16 09:50:35 GMT 2025","Wed Apr 16 09:50:37 GMT 2025","1937","tests","Сравнение HTML-ответов с двух серверов","TestCompareHTML","","","1 - web_tour","Проверяем, что страницы REF и TARGET возвращают одинаковый HTML и статус код 200."
