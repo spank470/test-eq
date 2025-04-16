@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Apr 16 06:49:22 GMT 2025","Wed Apr 16 06:49:24 GMT 2025","1523","tests","test_compare","","","","Сравнение HTML-ответов с двух серверов","Проверяем, что страницы REF и TARGET возвращают одинаковый HTML и статус код 200."
