@@ -62,6 +62,9 @@ class TestCompareHTML:
             assert ref.text == target.text, "HTML ответы отличаются!"
             
             
+            
+            
+            
 
             
             
